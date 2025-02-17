@@ -12,6 +12,7 @@ padding: 0;
 
 line-height: 1.6;
 
+}
 header {
 
 background-color: #4CAF50;
@@ -40,6 +41,8 @@ text-decoration: none;
 
 margin: 0 10px;
 
+}
+  
 nav a:hover {
 
 text-decoration: underline;
@@ -55,6 +58,7 @@ max-width: 800px;
 margin: 0 auto;
 
 }
+
 
 main img {
 
@@ -123,11 +127,9 @@ color: #ff5722;
 font-weight: bold;
 
 }
-  
+
 git add .
 
 git commit -m "Added CSS3 styling to the website"
 
 git push origin main
-
-  
