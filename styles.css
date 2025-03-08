@@ -2,22 +2,23 @@ body {
 
 font-family: Arial, sans-serif;
 
-color: #333;
+color: #000000;
 
-background-color: #FF008A;
+background-color: #f06292;
 
-margin: 20;
+margin: 0;
 
-padding: 20px;
+padding: 0;
 
 line-height: 1.6;
 
 }
+
 header {
 
-background-color: #FF68DD;
+background-color: #f06292;
 
-color: Pink;
+color: white;
 
 padding: 20px;
 
@@ -35,14 +36,15 @@ margin: 0;
 
 nav a {
 
-color: black;
+color: white;
 
 text-decoration: none;
 
 margin: 0 10px;
 
 }
-  
+
+
 nav a:hover {
 
 text-decoration: underline;
@@ -74,9 +76,9 @@ margin: 20px 0;
 
 footer {
 
-background-color: #e534eb ;
+background-color: #333;
 
-color: pink;
+color: white;
 
 text-align: center;
 
@@ -88,8 +90,6 @@ bottom: 0;
 
 width: 100%;
 
-}
-
 p {
 
 font-size: 1.1em;
@@ -99,7 +99,7 @@ font-size: 1.1em;
 
 a {
 
-color: #000000;
+color: #4CAF50;
 
 text-decoration: none;
 
@@ -127,9 +127,3 @@ color: #ff5722;
 font-weight: bold;
 
 }
-
-git add .
-
-git commit -m "Added CSS3 styling to the website"
-
-git push origin main
