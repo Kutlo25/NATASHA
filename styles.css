@@ -50,6 +50,8 @@ margin: 0 10px;
 
 nav a:hover {
 
+color: white;
+
 text-decoration: underline;
 
 }
