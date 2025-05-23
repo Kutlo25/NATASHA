@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savoury Sensations - Fine Dining Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+
+    <section class="menu1-section">
+        <h2>Explore Our menu</h2>
+        <input type="text" id="menuSearch" placeholder="Search for a dish...">
+
+        <div class="menu1-container">
+            <div class="menu1-category" data-category="starter">
+                <h3>Appetizers</h3>
+                <div class="menu1-card">
+                    <img src="images/bruschetta.jpg" alt="Bruschetta">
+                    <h4>Bruschetta</h4>
+                    <p>Grilled bread with tomato, basil, and olive oil.</p>
+                    <span class="price">P70.99</span>
+                </div>
+                <div class="menu1-card">
+                    <img src="images/soup.jpg" alt="Soup of the Day">
+                    <h4>Soup of the Day</h4>
+                    <p>Ask your server about our special soup selection.</p>
+                    <span class="price">P60.50</span>
+                </div>
+            </div>
+
+            <div class="menu1-category" data-category="main">
+                <h3>Main Course</h3>
+                <div class="menu1-card">
+                    <img src="images/steak.jpg" alt="Grilled Steak">
+                    <h4>Grilled Steak</h4>
+                    <p>Premium beef, cooked to perfection.</p>
+                    <span class="price">P390.99</span>
+                </div>
+                <div class="menu1-card">
+                    <img src="images/salmon.jpg" alt="Grilled Salmon">
+                    <h4>Grilled Salmon</h4>
+                    <p>Fresh Norwegian salmon with a lemon butter sauce.</p>
+                    <span class="price">P250.99</span>
+                </div>
+            </div>
+
+            <div class="menu1-category" data-category="dessert">
+                <h3>Desserts</h3>
+                <div class="menu1-card">
+                    <img src="images/tiramisu.jpg" alt="Tiramisu">
+                    <h4>Tiramisu</h4>
+                    <p>Classic Italian dessert with coffee and mascarpone.</p>
+                    <span class="price">P80.99</span>
+                </div>
+                <div class="menu1-card">
+                    <img src="images/cheese.jpg" alt="Cheesecake">
+                    <h4>New York Cheesecake</h4>
+                    <p>Rich and creamy with a buttery graham cracker crust.</p>
+                    <span class="price">P90.99</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="chef-special">
+        <h2>Chef’s Recommendation</h2>
+        <div class="special-card">
+            <img src="images/lobster.jpg" alt="Chef’s Special">
+            <h3>Signature Lobster Risotto</h3>
+            <p>Creamy risotto infused with saffron and fresh lobster.</p>
+            <span class="price">P340.99</span>
+            <button class="order-button">Order Now</button>
+        </div>
+    </section>
+
+    <section class="customer-reviews">
+        <h2>What Our Customers Say</h2>
+        <div class="review">
+            <h4>Lorato Dineo</h4>
+            <p>"Absolutely amazing steak! ⭐⭐⭐⭐⭐"</p>
+        </div>
+        <div class="review">
+            <h4>Mothusi Loapi</h4>
+            <p>"Best tiramisu ever! So creamy and rich. ⭐⭐⭐⭐⭐"</p>
+        </div>
+    </section>
+
+    <script>
+        // Load the navbar dynamically
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+
+        // Search functionality for menu1 items
+        document.getElementById("menuSearch").addEventListener("keyup", function () {
+            let filter = this.value.toLowerCase();
+            document.querySelectorAll(".menu1-card").forEach(item => {
+                item.style.display = item.textContent.toLowerCase().includes(filter) ? "block" : "none";
+            });
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo">Savoury Sensations</span>
+                <p>Exceptional dining experiences since 2018</p>
+            </div>
+            <div class="footer-info">
+                <h4>Hours</h4>
+                <p>Lunch: 12:00 PM - 2:30 PM</p>
+                <p>Dinner: 6:00 PM - 10:30 PM</p>
+                <p>Closed on Mondays</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Tsholofelo West 3211</p>
+                <p>Gaborone, Broadhurst</p>
+                <p>Tel: (+267) 399 1234</p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Savoury Sensations. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

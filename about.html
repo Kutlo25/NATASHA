@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savoury Sensations - Fine Dining Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('./navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            }).catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Culinary Journey</h2>
+                    <p class="about-description">Founded in 2018, Savoury Sensations has been at the forefront of culinary innovation in Gaborone. Our journey began with a simple vision: to create extraordinary dining experiences that celebrate both local ingredients and international flavors.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <h3>Farm to Table</h3>
+                            <p>We partner with local farmers to source the freshest ingredients, ensuring each dish tells a story of sustainability and quality.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Expert Chefs</h3>
+                            <p>Our culinary team, led by renowned Chef Mothusi Kgotla, brings together decades of experience from prestigious kitchens worldwide.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Unique Atmosphere</h3>
+                            <p>Our dining space combines contemporary African design with modern elegance, creating an unforgettable ambiance.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Wine Excellence</h3>
+                            <p>Our carefully curated wine collection features both local and international selections, perfectly paired with our menu.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-images">
+                    <img src="https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg" alt="Our Team" class="about-img main-img">
+                    <div class="secondary-images">
+                        <img src="https://images.pexels.com/photos/2544829/pexels-photo-2544829.jpeg" alt="Restaurant Interior" class="about-img">
+                        <img src="https://images.pexels.com/photos/2696064/pexels-photo-2696064.jpeg" alt="Food Preparation" class="about-img">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="achievements">
+                <div class="achievement-item">
+                    <span class="achievement-number">5000+</span>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="achievement-item">
+                    <span class="achievement-number">150+</span>
+                    <p>Signature Dishes</p>
+                </div>
+                <div class="achievement-item">
+                    <span class="achievement-number">15+</span>
+                    <p>Awards Won</p>
+                </div>
+                <div class="achievement-item">
+                    <span class="achievement-number">7</span>
+                    <p>Years of Excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo">Savoury Sensations</span>
+                <p>Exceptional dining experiences since 2018</p>
+            </div>
+            <div class="footer-info">
+                <h4>Hours</h4>
+                <p>Lunch: 12:00 PM - 2:30 PM</p>
+                <p>Dinner: 6:00 PM - 10:30 PM</p>
+                <p>Closed on Mondays</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Tsholofelo West 3211</p>
+                <p>Gaborone, Broadhurst</p>
+                <p>Tel: (+267) 399 1234</p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Savoury Sensations. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

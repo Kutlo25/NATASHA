@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savoury Sensations - Fine Dining Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+    
+    <section id="contact" class="contact">
+        <h2>Make a Reservation</h2>
+        <form id="reservation-form" class="reservation-form">
+            <div class="form-group">
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <input type="datetime-local" id="datetime" name="datetime" required>
+            </div>
+            <div class="form-group">
+                <select id="guests" name="guests" required>
+                    <option value="">Number of Guests</option>
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5+ Guests</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea id="special-requests" name="special-requests" placeholder="Special Requests"></textarea>
+            </div>
+            <button type="submit" class="submit-button">Confirm Reservation</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo">Savoury Sensations</span>
+                <p>Exceptional dining experiences since 2018</p>
+            </div>
+            <div class="footer-info">
+                <h4>Hours</h4>
+                <p>Lunch: 12:00 PM - 2:30 PM</p>
+                <p>Dinner: 6:00 PM - 10:30 PM</p>
+                <p>Closed on Mondays</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Tsholofelo West 3211</p>
+                <p>Gaborone, Broadhurst</p>
+                <p>Tel: (+267) 399 1234</p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Savoury Sensations. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

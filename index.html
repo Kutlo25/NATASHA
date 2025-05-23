@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savoury Sensations - Fine Dining Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+
+    <header class="stuff">
+        <div class="stuff-content">
+            <h1>Experience Fine Dining</h1>
+            <p>Indulge in culinary excellence with our chef-crafted seasonal menu</p>
+            <div class="stuff-buttons">
+                <button class="primary-button" onclick="window.location.href='menu.html';">View Menu</button>
+                <button class="secondary-button" onclick="window.location.href='reservation.html';">Make Reservation</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="menu" class="menu-section">
+        <h2>Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <div class="menu-icon">🍝</div>
+                <h3>Appetizers</h3>
+                <p>Start your culinary journey with our exquisite selection of starters</p>
+            </div>
+            <div class="menu-card">
+                <div class="menu-icon">🥩</div>
+                <h3>Main Course</h3>
+                <p>Savor our signature dishes crafted with the finest ingredients</p>
+            </div>
+            <div class="menu-card">
+                <div class="menu-icon">🍷</div>
+                <h3>Wine Selection</h3>
+                <p>Complement your meal with our curated wine collection</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="promotions" class="promotions">
+        <h2>Culinary Gallery</h2>
+        <div class="promotions-grid">
+            <div class="promotions-card">
+                <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg" alt="Signature Dish">
+                <div class="promotions-info">
+                    <h3>Signature Dishes</h3>
+                    <p>Chef's special creations</p>
+                </div>
+            </div>
+            <div class="promotions-card">
+                <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg" alt="Restaurant Interior">
+                <div class="promotions-info">
+                    <h3>Elegant Ambiance</h3>
+                    <p>Contemporary dining space</p>
+                </div>
+            </div>
+            <div class="promotions-card">
+                <img src="https://images.pexels.com/photos/2664216/pexels-photo-2664216.jpeg" alt="Wine Selection">
+                <div class="promotions-info">
+                    <h3>Wine Cellar</h3>
+                    <p>Premium wine collection</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo">Savoury Sensations</span>
+                <p>Exceptional dining experiences since 2018</p>
+            </div>
+            <div class="footer-info">
+                <h4>Hours</h4>
+                <p>Lunch: 12:00 PM - 2:30 PM</p>
+                <p>Dinner: 6:00 PM - 10:30 PM</p>
+                <p>Closed on Mondays</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Tsholofelo West 3211</p>
+                <p>Gaborone, Broadhurst</p>
+                <p>Tel: (+267) 399 1234</p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Savoury Sensations. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
