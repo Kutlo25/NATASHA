@@ -52,6 +52,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Reservation form handling
+    const reservationForm = document.getElementById('reservation-form');
+    
+    reservationForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(reservationForm);
+        const data = Object.fromEntries(formData);
+        
+        // Simple validation
+        if (!data.name || !data.email || !data.datetime || !data.guests) {
+            alert('Please fill in all required fields');
+            return;
+        }
+        
+        // Simulate form submission
+        reservationForm.querySelector('button').textContent = 'Processing...';
+        
+        setTimeout(() => {
+            alert('Reservation request sent successfully! We will confirm your reservation shortly.');
+            reservationForm.reset();
+            reservationForm.querySelector('button').textContent = 'Confirm Reservation';
+        }, 1500);
+    });
+
 
     // Intersection Observer for fade-in animations
     const observerOptions = {
